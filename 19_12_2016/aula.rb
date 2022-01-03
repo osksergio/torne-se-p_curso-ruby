@@ -18,5 +18,5 @@ end
 
 while (a <= b || b > c)
   puts "Olá"
-  b += 1
+  a += 1
 end
