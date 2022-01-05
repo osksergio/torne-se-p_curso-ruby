@@ -1,3 +1,5 @@
-a = "Sérgio"
+# frozen_string_literal: true
 
-puts "O valor da variável a é: " + a
+a = 'Sérgio'
+
+puts "O valor da variável a é: #{a}"

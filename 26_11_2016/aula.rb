@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'byebug'
 debugger
 
 a = 1
 
 h = {}
-puts "Stringy string McString!".class
+puts 'Stringy string McString!'.class
 puts 1.class
 puts 1.class.superclass
 puts 1.class.superclass.superclass

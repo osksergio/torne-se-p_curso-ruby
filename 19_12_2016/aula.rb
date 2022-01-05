@@ -1,22 +1,18 @@
+# frozen_string_literal: true
+
 require 'byebug'
 
 a = 1
 b = 2
 c = 4
 
-if 1==1 or 2==2
-  puts "Entrou no if"
-end
+puts 'Entrou no if' if (1 == 1) || (2 == 2)
 
-unless b==1 && a==3
-  puts "mostrou unless 1"
-end
+puts 'mostrou unless 1' unless b == 1 && a == 3
 
-unless b==1 and a==3
-  puts "mostrou unless 1"
-end
+puts 'mostrou unless 1' unless (b == 1) && (a == 3)
 
-while (a <= b || b > c)
-  puts "Olá"
+while a <= b || b > c
+  puts 'Olá'
   a += 1
 end

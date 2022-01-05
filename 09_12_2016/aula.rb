@@ -1,21 +1,23 @@
+# frozen_string_literal: true
+
 require 'byebug'
 
-a = "nossa aula de hoje"
+a = 'nossa aula de hoje'
 puts a
 
 # a = a.gsub("aula", "aula2")
 # pode ser usado o ! (bang) parar alterar o conteúdo da variável
-a.gsub!("aula", "aula2") #gsub substitui uma ocorrência na string por outra expressão informada.
+a.gsub!('aula', 'aula2') # gsub substitui uma ocorrência na string por outra expressão informada.
 puts a
 
-b = "aniversário"
+b = 'aniversário'
 
 # concatenar strings
 a = "nossa aula de hoje #{b}"
 puts a
 
 # outra forma de concatenar strings
-a = "nossa aula de hoje " + b
+a = "nossa aula de hoje #{b}"
 puts a
 
 # exibir uma string em forma de lista separada qdo ocorrer o caracter informado
@@ -40,24 +42,24 @@ puts a.downcase
 puts a.capitalize
 
 # para excluir um trecho da string... usar o delete
-s = "NOSSA aula de hoje"
-puts s.delete("de hoje")
+s = 'NOSSA aula de hoje'
+puts s.delete('de hoje')
 
 # strip  --> remove os espaços em branco
 # lstrip --> remove os espaços em branco a esquerda
 # rstrip --> remove os espaços em branco a direita
-string_com_espacos = "       Nossa aula de hoje.         "
+string_com_espacos = '       Nossa aula de hoje.         '
 puts string_com_espacos.strip
 puts string_com_espacos.lstrip
 puts string_com_espacos.rstrip
 
 # include? --> retorna true ou false qdo ocorrer a string informada
-puts string_com_espacos.include?("aula")
-puts string_com_espacos.include?("de hoje")
-puts string_com_espacos.include?("abobrinha")
+puts string_com_espacos.include?('aula')
+puts string_com_espacos.include?('de hoje')
+puts string_com_espacos.include?('abobrinha')
 
 # index --> retorna o índice de algum trecho informado existente na string
-puts string_com_espacos.index("Nossa")
+puts string_com_espacos.index('Nossa')
 
 # reverse --> inverte toda a string
 puts string_com_espacos.reverse

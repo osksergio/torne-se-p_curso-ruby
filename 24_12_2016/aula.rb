@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'byebug'
 
 # exemplo 1 >> WHILE
@@ -21,28 +23,30 @@ puts "while #{now += 1} .. #{top}" until now >= top
 # LOOP DO
 index = 0
 loop do
-   puts index
-   index += 1
-   break if index > 10
+  puts index
+  index += 1
+  break if index > 10
 end
 
 # exemplo de LOOP com NEXT para pular certos pontos do looping
 index = 0
 loop do
-  index += 1  
-  next if index == 5 or index == 8
+  index += 1
+  next if [5, 8].include?(index)
+
   puts index
   break if index >= 10
 end
 
 # exemplo de TIME
-5.times{ |index| puts index}
+5.times { |index| puts index }
 
 # exemplo do FOR
-for i in 0..7
-  next if i % 2 == 0
+(0..7).each do |i|
+  next if i.even?
+
   puts i
 end
 
 # exemplo de EACH
-(0..12).each{|i| puts i}
+(0..12).each { |i| puts i }
