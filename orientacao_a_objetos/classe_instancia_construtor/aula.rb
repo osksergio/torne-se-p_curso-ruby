@@ -6,18 +6,29 @@ require 'byebug'
 # -------------------------------
 # exemplo de criação de uma classe
 class Carro
-  # getter
+
+  # constructor
+  def initialize(nome='Modelo padrão')
+    @nome = nome
+  end
+
+  # setter
   def nome=(value)
     @nome = value
   end
 
-  # setter
+  # getter
   def nome
     @nome
   end
+
+  def mostrar(marca='Marca padrão')
+    puts "Marca: #{marca} - Modelo: #{@nome}"
+  end
 end
 
-debugger
-carro = Carro.new
-carro.nome = 'Palio'
-puts carro.nome
+#debugger
+#carro = Carro.new('Corolla')
+carro = Carro.new()
+#carro.nome = 'Corolla'
+carro.mostrar('Toyota')
